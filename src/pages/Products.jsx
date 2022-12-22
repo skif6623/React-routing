@@ -13,6 +13,7 @@ export const Products = () => {
 
   const updateQuerryString = name => {
     const nextParams = name !== '' ? { name } : {};
+    setSearchParams(nextParams);
   };
   return (
     <main>
