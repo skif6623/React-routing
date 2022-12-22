@@ -1,3 +1,4 @@
+import { Home } from 'pages/Home';
 import { Route, Routes } from 'react-router-dom';
 import { StyledLink } from './App.styled';
 export const App = () => {
@@ -9,9 +10,13 @@ export const App = () => {
         <StyledLink to="/products">Products</StyledLink>
       </nav>
       <Routes>
-        <Route path="/" element={<div>Home</div>} />
+        <Route path="/" element={Home} />
         <Route path="about" element={<div>About</div>} />
         <Route path="products" element={<div>Products</div>} />
+        <Route
+          path="products/:productsId"
+          element={<div>ProductsDetails</div>}
+        />
         <Route path="*" element={<div>Not found</div>} />
       </Routes>
     </div>
