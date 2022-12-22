@@ -1,6 +1,9 @@
 import { Home } from 'pages/Home';
+import { About } from 'pages/About';
+import { Products } from 'pages/Products';
 import { Route, Routes } from 'react-router-dom';
 import { StyledLink } from './App.styled';
+
 export const App = () => {
   return (
     <div>
@@ -10,9 +13,9 @@ export const App = () => {
         <StyledLink to="/products">Products</StyledLink>
       </nav>
       <Routes>
-        <Route path="/" element={Home} />
-        <Route path="about" element={<div>About</div>} />
-        <Route path="products" element={<div>Products</div>} />
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="products" element={<Products />} />
         <Route
           path="products/:productsId"
           element={<div>ProductsDetails</div>}
